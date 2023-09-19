@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --bg-color: #fcfcfc;
+    --primary-color: #352a24;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* navigation bar */
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    padding: 1.5rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #352a24;
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.navbar-toggler {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+    .justify-content-end {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+}
+
+/* Navbar ends */
+
+.tall-lighthouse-north-sea-cloudy-1 {
+    width: 100%;
+    height: 750px;
+    filter: brightness(50%);
+}
+
+.hey-there-i-am-phumlani-dlamini {
+    color: #ffffff;
+    text-align: center;
+    font: 700 50px "Playfair Display", sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.a-software-developer-who-specializes-in-the-mern-stack-and-web-3-i-m-also-a-passionate-smart-contract-security-researcher-and-auditor-i-love-building-decentralized-applications-that-are-secure-reliable-and-user-friendly-i-m-always-up-for-a-challenge-and-i-m-always-looking-for-new-ways-to-learn-and-grow {
+    color: #ffffff;
+    text-align: center;
+    font: 600 20px/1.6 "Poppins", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .hey-there-i-am-phumlani-dlamini {
+        font-size: 30px;
+        top: 30%;
+    }
+
+    .a-software-developer-who-specializes-in-the-mern-stack-and-web-3-i-m-also-a-passionate-smart-contract-security-researcher-and-auditor-i-love-building-decentralized-applications-that-are-secure-reliable-and-user-friendly-i-m-always-up-for-a-challenge-and-i-m-always-looking-for-new-ways-to-learn-and-grow {
+        font-size: 16px;
+        top: 65%;
+    }
+
+    .tall-lighthouse-north-sea-cloudy-1 {
+        max-width: 100%;
+        height: 750px;
+        filter: brightness(50%);
+        position: relative;
+    }
+}
+
+/* skills */
+.skills {
+    background: #1c3941;
+    width: 100%;
+    height: 750px;
+    position: relative;
+}
+
+.rectangle-31 {
+    background: linear-gradient(180deg, rgba(43, 164, 184, 0.35) 0%, rgba(41, 47, 48, 0.35) 100%);
+    border-radius: 25px;
+    width: 80%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    bottom: 0;
+}
+
+.skills3 {
+    color: #d9d9d9;
+    text-align: center;
+    font: 600 48px "Poppins", sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(40% - 242.5px);
+}
+
+.rectangle-18,
+.rectangle-19,
+.rectangle-17,
+.rectangle-15,
+.rectangle-16,
+.rectangle-14 {
+    background: #ffffff;
+    border-radius: 25px;
+    width: 230.36px;
+    height: 195.93px;
+    position: relative;
+    left: calc(50% - 115.64px);
+    top: calc(10% - -205.57px);
+}
+
+.icons-8-react-80-1,
+.icons-8-javascript-96-1,
+.icons-8-css-96-1,
+.icons-8-html-5-96-1,
+.icons-8-tailwind-css-96-1,
+.icons-8-solidity-96-1 {
+    border-radius: 25px;
+    width: 101.41px;
+    height: 95.28px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    left: 30%;
+    top: 30%;
+
+}
+
+@media (max-width: 768px) {
+
+    .rectangle-18,
+    .rectangle-19,
+    .rectangle-17,
+    .rectangle-15,
+    .rectangle-16,
+    .rectangle-14 {
+        background: #ffffff;
+        border-radius: 25px;
+        width: 120.26px;
+        height: 120.93px;
+        position: relative;
+        left: calc(70% - 115.64px);
+        top: 75%;
+
+    }
+
+    .rectangle-31 {
+        background: linear-gradient(180deg, rgba(43, 164, 184, 0.35) 0%, rgba(41, 47, 48, 0.35) 100%);
+        border-radius: 25px;
+        width: 80%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20%;
+        bottom: 0;
+    }
+
+    .icons-8-react-80-1,
+    .icons-8-javascript-96-1,
+    .icons-8-css-96-1,
+    .icons-8-html-5-96-1,
+    .icons-8-tailwind-css-96-1,
+    .icons-8-solidity-96-1 {
+        border-radius: 25px;
+        width: 101.41px;
+        height: 95.28px;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        left: 27%;
+        top: 23%;
+    }
+}
+
+/* PROJECTS START HERE */
+.projects {
+    background: rgba(53, 111, 127, 0.5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.projects2 {
+    color: #ffffff;
+    text-align: center;
+    font: 600 48px "Poppins", sans-serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.project-item {
+    margin-bottom: 30px;
+}
+
+.card-img-top {
+    border-radius: 25px 25px 0px 0px;
+    height: 177.1px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #000000;
+    font-size: 16px;
+}
+
+.card-body {
+    background: rgba(150, 166, 171, 0.5);
+    border-radius: 0px 0px 25px 25px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {}
+
+/* Contact page  */
+.contact {
+    background: #1c3941;
+    padding: 50px 0;
+}
+
+.rectangle-23 {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 32px;
+    border: 1px solid rgba(43, 164, 184, 0.5);
+    padding: 30px;
+}
+
+.contact-me {
+    color: #ffffff;
+    text-align: center;
+    font: 600 48px "Poppins", sans-serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    /* Adjust the margin-bottom value as needed */
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #352a24;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Social buttons */
+.socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 40%;
+    z-index: 30;
+}
+
+.socicon {
+    width: 2rem;
+    height: 2rem;
+
+}
+
+/* Social button ends */
+
+/* Scroll to top button */
+.scroll-up {
+    position: fixed;
+    cursor: pointer;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.up-arrow {
+    width: 3rem;
+    height: 3rem;
+    z-index: 10;
+}
+
+/* Scroll to top button ends */
+
+/* Copyright */
+.footer {
+    background-color: rgba(194, 212, 216, 255);
+    color: #ffffff;
+    font: 700 24px "Poppins", sans-serif;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.built-by-phumlani-bright-dlamini,
+.year {
+    font: 600 20px "Poppins", sans-serif;
+    display: block;
+}
+
+.year {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+
+    .built-by-phumlani-bright-dlamini,
+    .year {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .built-by-phumlani-bright-dlamini,
+    .year {
+        font-size: 18px;
+    }
+}
