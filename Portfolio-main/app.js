@@ -31,9 +31,11 @@ scrollUpButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
 function validateForm() {
   const fnameInput = document.querySelector('input[name="fname"]');
   const emailInput = document.querySelector('input[type="email"]');
+  const messageInput = document.querySelector('#textarea');
 
   // Validate First Name
   if (fnameInput.value.trim() === '') {
@@ -52,6 +54,14 @@ function validateForm() {
     document.getElementById('emailError').textContent = '';
   }
 
+  // Validate Message
+  if (messageInput.value.trim() === '') {
+    document.getElementById('messageError').textContent = 'Please enter a message.';
+    return false;
+  } else {
+    document.getElementById('messageError').textContent = '';
+  }
+
   // All fields are valid
   return true;
 }
@@ -59,8 +69,14 @@ function validateForm() {
 function resetForm() {
   document.querySelector('input[name="fname"]').value = '';
   document.querySelector('input[type="email"]').value = '';
-  document.querySelector('#textname').value = '';
+  document.querySelector('#textarea').value = '';
 }
+
+document.getElementById('submitBtn').addEventListener('click', function () {
+  submitForm();
+});
+
+
 
 
 function submitForm() {
@@ -70,9 +86,9 @@ function submitForm() {
   }
 
   // Get form values
-  document.querySelector('input[name="fname"]').value;
-  document.querySelector('input[type="email"]').value;
-  document.querySelector('#textname').value;
+  var fname = document.querySelector('input[name="fname"]').value;
+  var email = document.querySelector('input[type="email"]').value;
+  var message = document.querySelector('#textarea').value;
 
   // Set up template parameters
   var templateParams = {
@@ -80,6 +96,7 @@ function submitForm() {
     from_email: email,
     message: message
   };
+
 
   // Send the email using EmailJS
   emailjs.send('service_x3b2pwi', 'template_u6s7cgh', templateParams)
@@ -92,4 +109,5 @@ function submitForm() {
       console.error('Email sending failed:', error);
       // Add any error handling logic here
     });
+
 }
