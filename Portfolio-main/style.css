@@ -342,7 +342,6 @@ html {
 .submit-btn:hover {
     background-color: #0056b3;
 }
-
 /* Social buttons */
 .socials {
     display: flex;
@@ -356,7 +355,7 @@ html {
 .socicon {
     width: 2rem;
     height: 2rem;
-
+    margin-bottom: 0.5rem; /* Add the desired amount of space between the icons */
 }
 
 /* Social button ends */
@@ -374,7 +373,7 @@ html {
 .up-arrow {
     width: 3rem;
     height: 3rem;
-    z-index: 20;
+    z-index: 30;
 }
 
 /* Scroll to top button ends */
