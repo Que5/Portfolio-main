@@ -1,45 +1,36 @@
-
-const burger = document.querySelector("#burger-menu");
-const ul = document.querySelector("nav ul");
-const nav = document.querySelector("nav");
-
-// Scroll to top selection
-const scrollUp = document.querySelector("#scroll-up");
-
-// Select nav links
-const navLink = document.querySelectorAll(".nav-link");
+const burger = document.querySelector(".navbar-toggler");
+const ul = document.querySelector(".navbar-nav");
 
 // Hamburger menu function
-burger.addEventListener("click", () => {
+burger.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent form submission
   ul.classList.toggle("show");
 });
 
 // Close hamburger menu when a link is clicked
+const navLink = document.querySelectorAll(".nav-link");
 navLink.forEach((link) =>
   link.addEventListener("click", () => {
     ul.classList.remove("show");
   })
 );
-
-// scroll to top functionality
 const scrollUpButton = document.getElementById("scroll-up");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 500) { /* Show the button when the user has scrolled down 500 pixels */
+  if (window.scrollY > 400) {
     scrollUpButton.style.display = "block";
   } else {
     scrollUpButton.style.display = "none";
   }
 });
 
-scrollUp.addEventListener("click", () => {
+scrollUpButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     left: 0,
     behavior: "smooth",
   });
 });
-
 function validateForm() {
   const fnameInput = document.querySelector('input[name="fname"]');
   const emailInput = document.querySelector('input[type="email"]');
@@ -68,8 +59,9 @@ function validateForm() {
 function resetForm() {
   document.querySelector('input[name="fname"]').value = '';
   document.querySelector('input[type="email"]').value = '';
-  document.querySelector('.rectangle-27').value = '';
+  document.querySelector('#textname').value = '';
 }
+
 
 function submitForm() {
   // Validate the form
@@ -78,13 +70,13 @@ function submitForm() {
   }
 
   // Get form values
-  var name = document.getElementsByName('fname')[0].value;
-  var email = document.getElementsByClassName('rectangle-25')[0].value;
-  var message = document.getElementsByClassName('rectangle-27')[0].value;
+  document.querySelector('input[name="fname"]')[0].value;
+  document.querySelector('input[type="email"]')[0].value;
+  document.querySelector('#textname')[0].value;
 
   // Set up template parameters
   var templateParams = {
-    from_name: name,
+    from_name: fname,
     from_email: email,
     message: message
   };

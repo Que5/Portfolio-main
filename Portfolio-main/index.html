@@ -16,7 +16,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Phumlani Bright Dlamini</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +41,6 @@
         </div>
     </nav>
 
-
     <!-- <div class="hero" id="hero"> -->
     <img class="tall-lighthouse-north-sea-cloudy-1" src="images/lighthouse.jpg.jpg" />
 
@@ -63,39 +62,54 @@
         </div>
     </div>
     <!-- </div> -->
-
-    <div class="skills" id="skills">
+    <div class="skills-section" id="skills">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <div class="rectangle-31"></div>
-                    <div class="skills3">Skills</div>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="rectangle-18"></div>
-                            <img class="icons-8-react-80-1" src="icons/icons8-bootstrap.svg" />
+                    <div class="skills-heading">Skills</div>
+                    <div class="skills-wrapper">
+
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="skills-card">
+                                    <div class="card-rectangle"></div>
+                                    <img class="card-icon" src="icons/icons8-bootstrap.svg" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="skills-card">
+                                    <div class="card-rectangle"></div>
+                                    <img class="card-icon" src="icons/icons8-css3.svg" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="skills-card">
+                                    <div class="card-rectangle"></div>
+                                    <img class="card-icon" src="icons/icons8-git.svg" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="skills-card">
+                                    <div class="card-rectangle"></div>
+                                    <img class="card-icon" src="icons/icons8-html-5.svg" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="skills-card">
+                                    <div class="card-rectangle"></div>
+                                    <img class="card-icon" src="icons/icons8-javascript.svg" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="skills-card">
+                                    <div class="card-rectangle"></div>
+                                    <img class="card-icon" src="icons/icons8-solidity.svg" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="rectangle-19"></div>
-                            <img class="icons-8-javascript-96-1" src="icons/icons8-css3.svg" />
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="rectangle-17"></div>
-                            <img class="icons-8-css-96-1" src="icons/icons8-git.svg" />
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="rectangle-15"></div>
-                            <img class="icons-8-html-5-96-1" src="icons/icons8-html-5.svg" />
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="rectangle-16"></div>
-                            <img class="icons-8-tailwind-css-96-1" src="icons/icons8-javascript.svg" />
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="rectangle-14"></div>
-                            <img class="icons-8-solidity-96-1" src="icons/icons8-solidity.svg" />
-                        </div>
+
                     </div>
+
                 </div>
             </div>
         </div>
@@ -128,8 +142,10 @@
                     <div class="card project-item">
                         <img class="card-img-top" src="images/Dapp.png" alt="Project 1">
                         <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Dapp based on how you feel. Need a MetaMask Wallet to open it.</p>
+                            <h5 class="card-title">Dapp</h5>
+                            <p class="card-text">Dapp based on how you feel. Need a MetaMask Wallet to open it. <a
+                                    href="https://idyllic-moxie-e15148.netlify.app" target="_blank"
+                                    class="project-link">Check it Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -138,8 +154,10 @@
                     <div class="card project-item">
                         <img class="card-img-top" src="images/joke.png" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Random bad dad joke generator.</p>
+                            <h5 class="card-title">Jokes Generator</h5>
+                            <p class="card-text">Random bad dad joke generator, wanted to learn API's. <a
+                                    href="https://baddadjokesq.netlify.app" target="_blank" class="project-link">Check
+                                    it Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -148,8 +166,10 @@
                     <div class="card project-item">
                         <img class="card-img-top" src="images/lpage.png" alt="Project 3">
                         <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">A mock-up landing page for myself. Wanted to test my skills.</p>
+                            <h5 class="card-title">Landing Page</h5>
+                            <p class="card-text">A mock-up landing page for myself. Wanted to test my skills. <a
+                                    href="https://flourishing-crostata-50328e.netlify.app" target="_blank"
+                                    class="project-link">Check it Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -164,8 +184,10 @@
                     <div class="rectangle-23">
                         <form class="contact-form">
                             <input type="text" name="fname" required class="form-control mb-3" placeholder="Name">
+                            <div id="nameError" class="error-message"></div>
                             <input type="email" class="form-control mb-3" placeholder="Email">
-                            <textarea class="form-control mb-3" rows="5" placeholder="Message"></textarea>
+                            <div id="emailError" class="error-message"></div>
+                            <textarea class="form-control mb-3" rows="5" placeholder="Message" id="textarea"></textarea>
                             <div class="g-recaptcha mb-3" data-sitekey="6Lf9AiEoAAAAACWsMMbjztJ-gdANzlTkyYZfQ4Qm"></div>
                             <div class="submit-btn btn btn-primary btn-lg">Submit</div>
                         </form>
@@ -182,16 +204,20 @@
                 <div class="col-lg-12">
                     <div class="row justify-content-center">
                         <div class="col-md-6 text-center">
-                            <p class="mb-0">Built by Phumlani Bright Dlamini</p>
-                        </div>
-                        <div class="col-md-6 text-center">
                             <p class="mb-0">&copy; 2023</p>
                         </div>
+                        <div class="col-md-6 text-center">
+                            <p class="mb-0">Built by Phumlani Bright Dlamini</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+
+    <script src="app.js"></script>
 
     <script src='https://www.google.com/recaptcha/api.js'>
         function get_action(form) {
@@ -206,7 +232,11 @@
             }
         }
     </script>
-    <script src="app.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
