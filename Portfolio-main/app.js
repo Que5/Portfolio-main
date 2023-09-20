@@ -70,9 +70,9 @@ function submitForm() {
   }
 
   // Get form values
-  document.querySelector('input[name="fname"]')[0].value;
-  document.querySelector('input[type="email"]')[0].value;
-  document.querySelector('#textname')[0].value;
+  document.querySelector('input[name="fname"]').value;
+  document.querySelector('input[type="email"]').value;
+  document.querySelector('#textname').value;
 
   // Set up template parameters
   var templateParams = {
