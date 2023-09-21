@@ -85,6 +85,16 @@ function submitForm() {
     return; // Abort submission if validation fails
   }
 
+  // Verify reCAPTCHA
+  var response = grecaptcha.getResponse();
+  if (response.length === 0) {
+    // reCAPTCHA not completed
+    document.getElementById('captcha').innerHTML = "Please complete the reCAPTCHA.";
+    return;
+  } else {
+    document.getElementById('captcha').innerHTML = "Captcha completed.";
+  }
+
   // Get form values
   var fname = document.querySelector('input[name="fname"]').value;
   var email = document.querySelector('input[type="email"]').value;
@@ -97,7 +107,6 @@ function submitForm() {
     message: message
   };
 
-
   // Send the email using EmailJS
   emailjs.send('service_x3b2pwi', 'template_u6s7cgh', templateParams)
     .then(function (response) {
@@ -109,5 +118,4 @@ function submitForm() {
       console.error('Email sending failed:', error);
       // Add any error handling logic here
     });
-
 }

@@ -100,7 +100,7 @@ html {
 /* Navbar ends */
 
 .tall-lighthouse-north-sea-cloudy-1 {
-    width: 100%;
+    width: 100vw;
     height: 750px;
     filter: brightness(50%);
 }
@@ -110,7 +110,7 @@ html {
     text-align: center;
     font: 700 50px "Playfair Display", sans-serif;
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -120,7 +120,7 @@ html {
     text-align: center;
     font: 600 20px/1.6 "Poppins", sans-serif;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -128,7 +128,7 @@ html {
 @media (max-width: 767px) {
     .hey-there-i-am-phumlani-dlamini {
         font-size: 30px;
-        top: 30%;
+        top: 40%;
     }
 
     .a-software-developer-who-specializes-in-the-mern-stack-and-web-3-i-m-also-a-passionate-smart-contract-security-researcher-and-auditor-i-love-building-decentralized-applications-that-are-secure-reliable-and-user-friendly-i-m-always-up-for-a-challenge-and-i-m-always-looking-for-new-ways-to-learn-and-grow {
@@ -263,14 +263,26 @@ html {
 }
 
 /* PROJECTS START HERE */
+
 .projects {
-    background: rgba(53, 111, 127, 0.5);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+
+}
+
+#project-container {
+    width: 100;
+    background: rgba(53, 111, 127, 0.5);
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
 }
 
 .projects2 {
@@ -282,10 +294,6 @@ html {
 
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-}
 
 .project-item {
     margin-bottom: 30px;
@@ -341,6 +349,7 @@ html {
 .contact {
     background: #1c3941;
     padding: 50px 0;
+    height: 750px;
 }
 
 .rectangle-23 {
@@ -398,7 +407,7 @@ html {
     cursor: pointer;
     z-index: 10;
     bottom: 60px;
-    right: 20px;
+    right: 30px;
     display: none;
 
 }
@@ -435,12 +444,13 @@ html {
     .footer {
         position: sticky;
         bottom: 0;
-        padding: 10px 0;
+        padding: 15px 0;
         /* Adjust the top and bottom padding to your preference */
         background-color: rgba(194, 212, 216, 255);
         color: #ffffff;
         font: 700 24px "Poppins", sans-serif;
         text-align: center;
+
     }
 
     .year,
@@ -453,7 +463,7 @@ html {
         display: flex;
         flex-direction: column;
         position: fixed;
-        left: 85%;
+        right: 35px;
         bottom: 40%;
         z-index: 30;
     }
