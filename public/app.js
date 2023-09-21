@@ -37,12 +37,14 @@ function validateForm() {
   const emailInput = document.querySelector('input[type="email"]');
   const messageInput = document.querySelector('#textarea');
 
-  // Validate First Name
-  if (fnameInput.value.trim() === '') {
-    document.getElementById('nameError').textContent = 'Please enter your first name.';
+  // Validate the name field
+  var nameRegex = /^[a-zA-Z]+$/;
+  if (!nameRegex.test(fnameInput.value)) {
+    // Invalid name format
+    document.getElementById('nameError').innerHTML = "Please enter a valid name with only letters.";
     return false;
   } else {
-    document.getElementById('nameError').textContent = '';
+    document.getElementById('nameError').innerHTML = '';
   }
 
   // Validate Email
@@ -72,12 +74,6 @@ function resetForm() {
   document.querySelector('#textarea').value = '';
 }
 
-document.getElementById('submitBtn').addEventListener('click', function () {
-  submitForm();
-});
-
-
-
 function submitForm() {
   // Validate the form
   if (!validateForm()) {
@@ -90,6 +86,8 @@ function submitForm() {
     // reCAPTCHA not completed
     document.getElementById('captcha').innerHTML = "Please complete the reCAPTCHA.";
     return;
+  } else {
+    document.getElementById('captcha').innerHTML = '';
   }
 
   // Get form values
@@ -97,17 +95,6 @@ function submitForm() {
   var fname = fnameInput.value;
   var email = document.querySelector('input[type="email"]').value;
   var message = document.querySelector('#textarea').value;
-
-  // Validate the name field
-  var nameRegex = /^[a-zA-Z]+$/;
-  if (!nameRegex.test(fname)) {
-    // Invalid name format
-    document.getElementById('nameError').innerHTML = "Please enter a valid name with only letters.";
-    return;
-  }
-
-  // Clear any previous error messages
-  document.getElementById('nameError').innerHTML = "";
 
   // Set up template parameters
   var templateParams = {
@@ -127,3 +114,8 @@ function submitForm() {
       // Add any error handling logic here
     });
 }
+
+document.getElementById('submitBtn').addEventListener('click', function (event) {
+  event.preventDefault(); // Prevent default form submission behavior
+  submitForm();
+});
