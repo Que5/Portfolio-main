@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
@@ -42,7 +43,7 @@
     </nav>
 
     <!-- HOMEPAGE -->
-    <div class="hero" id="hero">
+    <div class="hero" id="hero" data-aos="fade-down">
         <img class="tall-lighthouse-north-sea-cloudy-1" src="images/tall-lighthouse-north-sea-cloudy-sky.jpg" />
 
         <div class="container">
@@ -72,7 +73,7 @@
                     <div class="skills-heading">Skills</div>
                     <div class="skills-wrapper">
 
-                        <div class="row">
+                        <div class="row" data-aos="flip-down">
                             <div class="col-lg-4 col-sm-6">
                                 <div class="skills-card">
                                     <div class="card-rectangle"></div>
@@ -135,7 +136,7 @@
 
 
     <!-- PROJECTS PAGE -->
-    <div class="container-fluid" id="project-container">
+    <div class="container-fluid" id="project-container" data-aos="zoom-in">
         <div class="projects" id="projects">
             <h2 class="projects2">Projects</h2>
 
@@ -183,7 +184,7 @@
     <div class="contact" id="contactForm">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <h1 class="contact-me text-center">Contact me</h1>
+                <h1 class="contact-me text-center">Contact Me</h1>
                 <div class="col-lg-8">
                     <div class="rectangle-23">
                         <form class="contact-form">
@@ -245,6 +246,11 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
     <script type="text/javascript">
         (function () {
