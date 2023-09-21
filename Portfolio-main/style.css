@@ -224,25 +224,24 @@ html {
     width: 100px;
 }
 
-@media (min-width: 769px) {
-    .skills-wrapper {
-        display: flex;
-        justify-content: center;
-    }
-}
-
 @media (max-width: 768px) {
+    .skills-wrapper {
+        display: grid;
+        place-items: center;
+        margin: 0 35px;
+    }
 
     .row {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -15px;
+        justify-content: center;
     }
 
     .col-lg-4 {
         flex: 0 0 50%;
         max-width: 50%;
-        padding: 0 15px;
+        padding: 0 35px;
     }
 
     .skills-card {
@@ -251,8 +250,17 @@ html {
         position: relative;
         top: 20%;
     }
-}
 
+    .skills-heading {
+        color: #d9d9d9;
+        position: relative;
+        left: 30%;
+        top: 0px;
+        font: 600 48px "Poppins", sans-serif;
+        margin: 50px 20px;
+
+    }
+}
 
 /* PROJECTS START HERE */
 .projects {
@@ -290,14 +298,15 @@ html {
 }
 
 .card-title {
-    color: #000000;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 600;
 }
 
 .card-text {
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
+    font-weight: 500;
 }
 
 .card-body {
@@ -305,6 +314,26 @@ html {
     border-radius: 0px 0px 25px 25px;
     padding: 10px;
 }
+
+.card {
+    max-width: 350px;
+    /* Adjust the max-width to your desired size */
+    margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+    .card {
+        max-width: 250px;
+        /* Adjust the max-width to your desired size for small devices */
+
+
+        margin: 0 auto;
+        margin-bottom: 20px;
+        /* Add a margin-bottom value to create space between the cards */
+    }
+}
+
+
 
 @media (max-width: 768px) {}
 
@@ -388,36 +417,45 @@ html {
     background-color: rgba(194, 212, 216, 255);
     color: #ffffff;
     font: 700 24px "Poppins", sans-serif;
-    padding: 20px 0;
+    padding: 8px 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.footer p {
-    margin-bottom: 0;
-}
-
-.built-by-phumlani-bright-dlamini,
-.year {
+.year,
+.built-by-phumlani-bright-dlamini {
     font: 600 20px "Poppins", sans-serif;
     display: block;
-}
-
-.year {
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 @media (max-width: 767px) {
-
-    .built-by-phumlani-bright-dlamini,
-    .year {
-        font-size: 18px;
+    .footer {
+        position: sticky;
+        bottom: 0;
+        padding: 10px 0;
+        /* Adjust the top and bottom padding to your preference */
+        background-color: rgba(194, 212, 216, 255);
+        color: #ffffff;
+        font: 700 24px "Poppins", sans-serif;
+        text-align: center;
     }
-}
 
-@media (max-width: 767px) {
-
-    .built-by-phumlani-bright-dlamini,
-    .year {
-        font-size: 18px;
+    .year,
+    .built-by-phumlani-bright-dlamini {
+        font-size: 16px;
+        font-weight: bold;
     }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 85%;
+        bottom: 40%;
+        z-index: 30;
+    }
+
 }
