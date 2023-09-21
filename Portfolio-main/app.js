@@ -78,7 +78,6 @@ document.getElementById('submitBtn').addEventListener('click', function () {
 
 
 
-
 function submitForm() {
   // Validate the form
   if (!validateForm()) {
@@ -91,14 +90,24 @@ function submitForm() {
     // reCAPTCHA not completed
     document.getElementById('captcha').innerHTML = "Please complete the reCAPTCHA.";
     return;
-  } else {
-    document.getElementById('captcha').innerHTML = "Captcha completed.";
   }
 
   // Get form values
-  var fname = document.querySelector('input[name="fname"]').value;
+  var fnameInput = document.querySelector('input[name="fname"]');
+  var fname = fnameInput.value;
   var email = document.querySelector('input[type="email"]').value;
   var message = document.querySelector('#textarea').value;
+
+  // Validate the name field
+  var nameRegex = /^[a-zA-Z]+$/;
+  if (!nameRegex.test(fname)) {
+    // Invalid name format
+    document.getElementById('nameError').innerHTML = "Please enter a valid name with only letters.";
+    return;
+  }
+
+  // Clear any previous error messages
+  document.getElementById('nameError').innerHTML = "";
 
   // Set up template parameters
   var templateParams = {
@@ -111,11 +120,13 @@ function submitForm() {
   emailjs.send('service_x3b2pwi', 'template_u6s7cgh', templateParams)
     .then(function (response) {
       console.log('Email successfully sent!', response.status, response.text);
-      // Add any success message or redirect logic here
       resetForm(); // Clear the form after successful submission
     })
     .catch(function (error) {
       console.error('Email sending failed:', error);
       // Add any error handling logic here
     });
+
+  // Prevent form submission
+  return false;
 }
