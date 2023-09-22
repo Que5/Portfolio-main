@@ -37,16 +37,13 @@ function validateForm() {
   const emailInput = document.querySelector('input[type="email"]');
   const messageInput = document.querySelector('#textarea');
 
-  // Validate the name field
-  var nameRegex = /^[a-zA-Z]+$/;
-  if (!nameRegex.test(fnameInput.value)) {
-    // Invalid name format
-    document.getElementById('nameError').innerHTML = "Please enter a valid name with only letters.";
+  // Validate First Name
+  if (fnameInput.value.trim() === '') {
+    document.getElementById('nameError').textContent = 'Please enter your first name.';
     return false;
   } else {
-    document.getElementById('nameError').innerHTML = '';
+    document.getElementById('nameError').textContent = '';
   }
-
   // Validate Email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(emailInput.value)) {

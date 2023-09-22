@@ -11,6 +11,11 @@
     --bottom-margin-2: 1rem;
     --line-height: 1.7rem;
     --transition: 0.3s;
+
+}
+
+body {
+    width: 100%;
 }
 
 
@@ -27,6 +32,7 @@ html {
     top: 0;
     z-index: 15;
     padding: 1.5rem;
+    background-color: rgba(53, 111, 127, 0.5);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -103,6 +109,7 @@ html {
     width: 99vw;
     height: 750px;
     filter: brightness(50%);
+    position: relative;
 }
 
 .hey-there-i-am-phumlani-dlamini {
@@ -186,11 +193,6 @@ html {
     margin: 50px auto;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
-.card-text {
-    color: #ffffff;
-}
-
 
 .skills-card {
     position: relative;
@@ -306,13 +308,13 @@ html {
 }
 
 .card-title {
-    color: #ffffff;
+    color: #7c3c19;
     font-size: 20px;
     font-weight: 600;
 }
 
 .card-text {
-    color: #ffffff;
+    color: #7c3c19;
     font-size: 16px;
     font-weight: 500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -320,7 +322,6 @@ html {
 
 .card-body {
     background: rgba(150, 166, 171, 0.5);
-    border-radius: 0px 0px 25px 25px;
     padding: 10px;
 }
 
@@ -328,6 +329,12 @@ html {
     max-width: 350px;
     /* Adjust the max-width to your desired size */
     margin: 0 auto;
+    box-shadow: #1c3941;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #1c3941;
 }
 
 @media (max-width: 576px) {
@@ -372,14 +379,18 @@ html {
 .submit-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #352a24;
+    background-color: #7c3c19;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    background-color: #1c3941;
+}
+
+.error-message {
+    color: red;
 }
 
 /* Social buttons */
@@ -424,7 +435,7 @@ html {
 
 /* Copyright */
 .footer {
-    background-color: rgba(194, 212, 216, 255);
+    background-color: rgba(53, 111, 127, 0.5);
     color: #ffffff;
     font: 700 24px "Poppins", sans-serif;
     padding: 8px 0;
@@ -432,7 +443,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 99vw;
+    width: 100%;
 }
 
 .year,
@@ -442,10 +453,7 @@ html {
     margin: 0;
 }
 
-.project-link {
-    text-decoration: none;
-    color: rgba(53, 111, 127, 0.5);
-}
+
 
 @media (max-width: 767px) {
     .footer {
