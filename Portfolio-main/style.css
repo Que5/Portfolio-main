@@ -37,11 +37,12 @@ html {
 }
 
 .navbar-brand {
-    color: #352a24;
+    color: white;
 }
 
 .navbar-nav .nav-link {
-    color: var(--primary-color);
+    color: #ffffff;
+    /* Change to white */
     transition: var(--transition);
 }
 
